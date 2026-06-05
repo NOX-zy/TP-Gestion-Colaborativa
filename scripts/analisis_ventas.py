@@ -5,8 +5,6 @@ df = pd.read_csv("datos/ventas.csv")
 
 print(df.head())
 
-import pandas as pd
-
 
 #KAN-3 feat:
 df = pd.read_csv("datos/ventas.csv")
