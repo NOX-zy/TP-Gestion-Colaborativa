@@ -53,6 +53,6 @@ plt.ylabel("Ventas")
 
 plt.tight_layout()
 
+print("Generando grafico...")
 plt.savefig("resultados/grafico_ventas.png")
-
-print("Grafico guardado en resultados/grafico_ventas.png")
+print("Grafico guardado")
