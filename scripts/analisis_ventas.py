@@ -39,3 +39,22 @@ print("PRODUCTO MÁS VENDIDO:", producto_mas_vendido)
 
 print("\nVENTAS POR CATEGORÍA")
 print(ventas_categoria)
+
+
+#Grafico
+import matplotlib.pyplot as plt
+
+ventas_categoria = df.groupby("Categoria")["Venta_Total"].sum()
+
+plt.figure(figsize=(8,5))
+ventas_categoria.plot(kind="bar")
+
+plt.title("Ventas por categoria")
+plt.xlabel("Categoria")
+plt.ylabel("Ventas")
+
+plt.tight_layout()
+
+plt.savefig("resultados/grafico_ventas.png")
+
+print("Grafico guardado en resultados/grafico_ventas.png")
