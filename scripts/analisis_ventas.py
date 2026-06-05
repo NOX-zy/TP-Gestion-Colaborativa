@@ -40,12 +40,21 @@ print(ventas_categoria)
 
 
 #Grafico
+import pandas as pd
 import matplotlib.pyplot as plt
 
+df = pd.read_csv("datos/ventas.csv")
+
+# Crear columna de venta total
 df["Venta_Total"] = df["Cantidad"] * df["Precio"]
 
+# Mostrar primeras filas
+print(df.head())
+
+# Ventas por categoría
 ventas_categoria = df.groupby("Categoria")["Venta_Total"].sum()
 
+# Crear gráfico
 plt.figure(figsize=(8,5))
 ventas_categoria.plot(kind="bar")
 
@@ -55,6 +64,7 @@ plt.ylabel("Ventas")
 
 plt.tight_layout()
 
-print("Generando grafico...")
+# Guardar gráfico
 plt.savefig("resultados/grafico_ventas.png")
-print("Grafico guardado")
+
+print("Grafico guardado correctamente")
