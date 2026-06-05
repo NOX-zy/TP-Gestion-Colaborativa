@@ -42,6 +42,8 @@ print(ventas_categoria)
 #Grafico
 import matplotlib.pyplot as plt
 
+df["Venta_Total"] = df["Cantidad"] * df["Precio"]
+
 ventas_categoria = df.groupby("Categoria")["Venta_Total"].sum()
 
 plt.figure(figsize=(8,5))
