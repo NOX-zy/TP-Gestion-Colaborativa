@@ -5,7 +5,6 @@ df = pd.read_csv("datos/ventas.csv")
 
 print(df.head())
 
-
 #KAN-3 feat:
 
 # Crear columna de venta total
@@ -40,9 +39,6 @@ print(ventas_categoria)
 
 #Grafico
 import matplotlib.pyplot as plt
-
-# Crear columna de venta total
-df["Venta_Total"] = df["Cantidad"] * df["Precio"]
 
 # Mostrar primeras filas
 print(df.head())
