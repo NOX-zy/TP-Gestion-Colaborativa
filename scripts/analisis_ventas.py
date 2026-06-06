@@ -26,7 +26,7 @@ producto_mas_vendido = (
 
 # Ventas por categoría
 ventas_categoria = (
-    df.groupby("Categoria")["Venta_Total"]
+    df.groupby("Categoría")["Venta_Total"]
     .sum()
 )
 
