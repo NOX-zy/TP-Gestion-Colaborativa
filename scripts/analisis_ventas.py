@@ -36,8 +36,7 @@ print("PRODUCTO MÁS VENDIDO:", producto_mas_vendido)
 print("\nVENTAS POR CATEGORÍA")
 print(ventas_categoria)
 
-
-#Grafico
+# Grafico
 import matplotlib.pyplot as plt
 
 # Mostrar primeras filas
@@ -50,8 +49,8 @@ ventas_categoria = df.groupby("Categoría")["Venta_Total"].sum()
 plt.figure(figsize=(8,5))
 ventas_categoria.plot(kind="bar")
 
-plt.title("Ventas por categoria")
-plt.xlabel("Categoria")
+plt.title("Ventas por categoría")
+plt.xlabel("Categoría")
 plt.ylabel("Ventas")
 
 plt.tight_layout()
